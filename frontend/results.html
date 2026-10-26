@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wandr Results</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./static/css/styles.css" />
+    <script type="module" src="./static/js/results.js"></script>
+  </head>
+  <body>
+    <main class="results-page">
+      <header class="results-header">
+        <a href="./planner.html" class="back-link">← Back to planner</a>
+        <div style="display:flex; gap:0.8rem; align-items:center;">
+          <button id="save-trip-button" class="secondary-button" type="button">Save trip to server</button>
+          <button id="regenerate-button" class="primary-button" type="button">Regenerate</button>
+        </div>
+      </header>
+
+      <section id="trip-overview" class="result-shell">
+        <div class="results-headline">
+          <p class="eyebrow">Personalized itinerary</p>
+          <h1 id="trip-title">Your trip</h1>
+          <p id="trip-narrative" class="lead"></p>
+        </div>
+        <div class="score-strip">
+          <span>Best for: <strong id="trip-persona">Couple</strong></span>
+          <span>Style: <strong id="trip-style">Cultural</strong></span>
+          <span>Budget: <strong id="trip-budget">Midrange</strong></span>
+        </div>
+      </section>
+
+      <section class="category-grid">
+        <div class="result-panel">
+          <h2>Top recommendations</h2>
+          <div id="recommendations"></div>
+        </div>
+
+        <div class="result-panel">
+          <h2>Budget</h2>
+          <div id="budget-breakdown"></div>
+        </div>
+      </section>
+
+      <section class="result-panel itinerary-panel">
+        <h2>Itinerary</h2>
+        <div id="itinerary"></div>
+      </section>
+
+      <section class="result-panel local-panel">
+        <h2>Local intelligence</h2>
+        <div class="tab-buttons" role="tablist" aria-label="Local intelligence tabs">
+          <button class="tab-button active" data-tab="guide" type="button">City guide</button>
+          <button class="tab-button" data-tab="tips" type="button">Travel tips</button>
+          <button class="tab-button" data-tab="timing" type="button">Best timing</button>
+        </div>
+        <div id="local-intelligence" class="tab-content"></div>
+      </section>
+    </main>
+  </body>
+</html>

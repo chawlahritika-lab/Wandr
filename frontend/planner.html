@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wandr Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./static/css/styles.css" />
+    <script type="module" src="./static/js/planner.js"></script>
+  </head>
+  <body>
+    <main class="planner-page">
+      <header class="page-header">
+        <a class="back-link" href="./index.html">← Back home</a>
+        <h1>Plan your trip</h1>
+      </header>
+
+      <section class="planner-shell">
+        <form id="planner-form" class="planner-form">
+          <div class="field-group">
+            <label for="destination">Destination</label>
+            <input id="destination" name="destination" type="text" value="Kyoto" required />
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="start_date">Start date</label>
+              <input id="start_date" name="start_date" type="date" required />
+            </div>
+            <div class="field-group">
+              <label for="end_date">End date</label>
+              <input id="end_date" name="end_date" type="date" required />
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="travelers">Travelers</label>
+            <input id="travelers" name="travelers" type="number" min="1" max="12" value="2" />
+          </div>
+
+          <div class="field-group">
+            <label>Persona</label>
+            <div class="choice-grid" data-group="persona">
+              <button type="button" class="choice-card" data-value="Solo">Solo</button>
+              <button type="button" class="choice-card" data-value="Student">Student</button>
+              <button type="button" class="choice-card" data-value="Couple">Couple</button>
+              <button type="button" class="choice-card" data-value="Honeymoon">Honeymoon</button>
+              <button type="button" class="choice-card" data-value="Family">Family</button>
+              <button type="button" class="choice-card" data-value="Backpacker">Backpacker</button>
+            </div>
+            <input type="hidden" id="persona" name="persona" value="Couple" />
+          </div>
+
+          <div class="field-group">
+            <label>Budget level</label>
+            <div class="choice-grid" data-group="budget_level">
+              <button type="button" class="choice-card" data-value="Budget">Budget</button>
+              <button type="button" class="choice-card" data-value="Midrange">Midrange</button>
+              <button type="button" class="choice-card" data-value="Premium">Premium</button>
+              <button type="button" class="choice-card" data-value="Luxe">Luxe</button>
+            </div>
+            <input type="hidden" id="budget_level" name="budget_level" value="Midrange" />
+          </div>
+
+          <div class="field-group">
+            <label>Travel style</label>
+            <div class="choice-grid" data-group="travel_style">
+              <button type="button" class="choice-card" data-value="Relaxed">Relaxed</button>
+              <button type="button" class="choice-card" data-value="Adventurous">Adventurous</button>
+              <button type="button" class="choice-card" data-value="Cultural">Cultural</button>
+              <button type="button" class="choice-card" data-value="Luxury">Luxury</button>
+              <button type="button" class="choice-card" data-value="Foodie">Foodie</button>
+              <button type="button" class="choice-card" data-value="Wellness">Wellness</button>
+            </div>
+            <input type="hidden" id="travel_style" name="travel_style" value="Cultural" />
+          </div>
+
+          <div class="field-group">
+            <label>Interests</label>
+            <div class="interest-grid">
+              <button type="button" class="interest-chip" data-value="Food">Food</button>
+              <button type="button" class="interest-chip" data-value="History">History</button>
+              <button type="button" class="interest-chip" data-value="Nature">Nature</button>
+              <button type="button" class="interest-chip" data-value="Nightlife">Nightlife</button>
+              <button type="button" class="interest-chip" data-value="Shopping">Shopping</button>
+              <button type="button" class="interest-chip" data-value="Adventure">Adventure</button>
+              <button type="button" class="interest-chip" data-value="Wellness">Wellness</button>
+              <button type="button" class="interest-chip" data-value="Art">Art</button>
+            </div>
+            <input type="hidden" id="interests" name="interests" value="Food,History" />
+          </div>
+
+          <button type="submit" class="primary-button full-width">Generate trip</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

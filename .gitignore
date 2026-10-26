@@ -1,0 +1,33 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Runtime data
+*.db
+*.sqlite
+*.sqlite3
+
+# Node and frontend builds
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# macOS and editor files
+.DS_Store
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+*.swp
